@@ -136,7 +136,6 @@ async def register_user(
             str(new_user.email),
             activation_link
         )
-        
         return UserRegistrationResponseSchema.model_validate(new_user)
 
 
