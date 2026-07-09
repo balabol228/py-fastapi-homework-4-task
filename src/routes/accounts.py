@@ -289,11 +289,11 @@ async def request_password_reset_token(
     reset_link = f"http://127.0.0.1:8000/accounts/password-reset/confirm/?token={reset_token.token}"
 
     email_method = getattr(
-        email_sender, 
-        "send_password_reset_email", 
+        email_sender,
+        "send_password_reset_email",
         getattr(
-            email_sender, 
-            "send_reset_password_email", 
+            email_sender,
+            "send_reset_password_email",
             email_sender.send_password_reset_complete_email
         )
     )
